@@ -1,0 +1,24 @@
+canario(tico).
+peixe(nemo).
+turbarao(tutu).
+vaca(mimosa).
+morcego(vamp).
+avestruz(xica).
+salmao(alfred).
+
+possui(peixe, nadadeira).
+possui(passaro, asas).
+
+peixes(X) :- tubarao(X); peixe(X); salmao(X).
+mamiferos(X) :- vaca(X); morcego(X).
+aves(X) :- canario(X), morcego(X), avestruz(X).
+
+animal(X) :- mamiferos(X); peixes(X); aves(X).
+
+tem_pele(X) :- animal(X).
+tem_asas(X) :- animal(X), aves(X).
+voa(X) :- (animal(X), aves(X)), not(avestruz(X)).
+
+poe_ovos(X) :- (peixes(X), not(tubarao(X))); aves(X).
+
+
