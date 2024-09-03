@@ -1,0 +1,7 @@
+bonito().
+
+rico().
+
+amavel().
+
+forte().
