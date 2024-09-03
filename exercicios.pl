@@ -1,7 +1,0 @@
-bonito().
-
-rico().
-
-amavel().
-
-forte().
